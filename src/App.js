@@ -11,7 +11,7 @@ function App() {
         <Navbar />
         <Switch>
           <Route exact path="/">
-            <Home />
+            {/* <Home /> */}
           </Route>
         </Switch>
       </div>

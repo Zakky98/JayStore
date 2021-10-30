@@ -1,4 +1,8 @@
 // TODO: Fun
+import Home from "./Home";
+import Service from "./ServicePage"
+import Contact from "./Contact"
+
 
 function Navbar() {
   return (
@@ -6,7 +10,7 @@ function Navbar() {
       <header class="header" id="header">
         <nav class="nav container">
           <a href="#" class="nav__logo">
-            JaysBoostingService
+            Jays Boosting Service
           </a>
 
           <div class="nav__menu" id="nav-menu">
@@ -20,7 +24,7 @@ function Navbar() {
 
               <li class="nav__item">
                 <a href="#Services" class="nav__link active link">
-                  <i class="bx bx-basket nav__icon"></i>
+                  <i class="bx bx-info-square nav__icon" ></i>
                   <span class="nav__name">Services</span>
                 </a>
               </li>
@@ -37,16 +41,19 @@ function Navbar() {
       </header>
 
       <main>
-        <section class="container section section__height" id="home">
+        <section class="container section section__height PageColor" id="home">
           <h2 class="section__title">Home</h2>
+          <Home />
         </section>
 
-        <section class="container section section__height" id="Services">
+        <section class="container section section__height PageColor" id="Services">
           <h2 class="section__title">Services</h2>
+          <Service />
         </section>
 
-        <section class="container section section__height" id="ContactUs">
+        <section class="container section section__height PageColor" id="ContactUs">
           <h2 class="section__title">Contact Us</h2>
+          <Contact />
         </section>
       </main>
     </div>
@@ -54,6 +61,3 @@ function Navbar() {
 }
 
 export default Navbar;
-
-//Fix Section??
-//Add buttons to the list classes.
