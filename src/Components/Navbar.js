@@ -2,7 +2,7 @@
 import Home from "./Home";
 import Service from "./ServicePage"
 import Contact from "./Contact"
-
+import UpdateService from "./UpdateService";
 
 function Navbar() {
   return (
@@ -30,6 +30,13 @@ function Navbar() {
               </li>
 
               <li class="nav__item">
+                <a href="#UpdateService" class="nav__link active link">
+                  <i class='bx bx-edit-alt nav__icon'></i>
+                  <span class="nav__name">Update Service</span>
+                </a>
+              </li>
+
+              <li class="nav__item">
                 <a href="#ContactUs" class="nav__link active link">
                   <i class="bx bxs-contact nav__icon"></i>
                   <span class="nav__name">Contact Us</span>
@@ -49,6 +56,11 @@ function Navbar() {
         <section class="container section section__height PageColor" id="Services">
           <h2 class="section__title">Services</h2>
           <Service />
+        </section>
+
+        <section class="container section section__height PageColor" id="UpdateService">
+          <h2 class="section__title">Update Service</h2>
+          <UpdateService />
         </section>
 
         <section class="container section section__height PageColor" id="ContactUs">

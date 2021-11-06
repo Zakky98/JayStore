@@ -298,7 +298,15 @@ img{
 
 /* Image Spacing/Movement */
 
-.Tark1img{
+.tark1img{
+  justify-content: center;
+  width: auto;
+  height: auto;
+  border-radius: 12px;
+  padding-bottom: 12rem;
+}
+
+.boostBimg{
   justify-content: center;
   width: auto;
   height: auto;
@@ -307,7 +315,7 @@ img{
 }
 
 /* Image Text Spacing/Movement */
-.Tark1Text{
+.tark1Text{
   text-align: left;
   justify-content: space-around;
 }
@@ -321,7 +329,7 @@ img{
 
 /* Button Customisation */
 
-.BuyButton{
+.buyButton{
   background-color: #e7e7e7; color: black;
   border: none;
   border-radius: 12px;
@@ -351,15 +359,6 @@ input[type=text] {
   font-size: var(--normal-font-size);
 }
 
-input[type=submit] {
-  cursor: pointer;
-  width: 10%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  box-sizing: border-box;
-  border-radius: 12px;
-  font-size: var(--normal-font-size);
-}
 
 select {
   cursor: pointer;
@@ -370,46 +369,51 @@ select {
   background-color: white;
 }
 
-.Refid{
+.refId{
   padding-top: 12rem;
+}
+
+.subButton{
+  cursor: pointer;
+  border-radius: 12px;
+  background-color: white;
+  box-sizing: border-box;
+  padding: 12px 20px;
+  margin: 8px 0;
 }
 /* Contact Info Styling */
 
-.ContactInfo h2 {
+.contactInfo h2 {
   font-size: 30px;
 }
 
 
-.ContactInfo li {
+.contactInfo li {
 
 }
 
-.ContactInfo p {
+.contactInfo p {
   font-style: italic;
 }
 
 /* Home Section Styling */
 
-.HomePage h2{
+.homePage h2{
   font-size: 40px;
 }
 
-.HomePage li{
+.homePage li{
   font-size: 30px;
 }
 
-.HomePage p{
+.homePage p{
   font-size: 25px;
 }
 
 /* Service Section Styling */
 
-.ServicePage label{
+.servicePage label{
   font-size: 40px;
 }
 
-/* ADD BORDER TO TITLES? */
-/* MAKE TEXT FOR BUTTONS LOOK NICE/STRUCTURE */
-/* CREATE SHOW HIDE FUNCTION FOR MORE INFO ON SERVICES */
-/* MAKE SERVICES SECTION LOOK NICER */
-/* FIX HOME PAGE AS IMAGE IS CUT OFF */
+/* REMIND SNAKES, DELETE SERVICE SHOULD BE IN SAME PLACE AS UPDATE SERVICE */

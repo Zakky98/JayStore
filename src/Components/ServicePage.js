@@ -1,36 +1,62 @@
+import React,{useState, useEffect} from "react";
+
 function ServicePage() {
-    return (<div className="ServicePage"> 
-        {/* <div className="popup" id="popup-1">
-            <div className="overlay"></div>
-            <div className="content">
-                <div className="close-btn" onclick="togglePopup()">&times;</div>
-                <h1>Title</h1>
-                <p>LOREM IPSUM</p>
-            </div>
-        </div>
-            Broken needs fix
-        <button onclick="togglePopup()">Show Popup</button> */} 
-         <form id="ServiceForm">
-              <label for="email">Email Address</label>
-              <input type="text" id="email" name="email"></input>
-              <input type="submit"></input>
-          </form>
-          <label for="Servicec">Choose a service:</label>
-          <select name="Servicec" id="Servicec" form="ServiceForm">
+    const [referenceId, setReferenceId] = useState(null);
+    const [email, setEmail] = useState(null);
+    const [dateCreate, setDateCreate] = useState(null);
+    const [serviceChosen, setServiceChosen] = useState(null);
+
+    // TODO Make sure validation check that the servicecreate does not create duplicate reference id's
+    
+    const dbServiceCreate = (event) => {
+      event.preventDefault()
+      const userDate = new Date();
+        setDateCreate(userDate)
+
+      const newReferenceId = Math.floor(Math.random() * 1001) +1;
+        setReferenceId(newReferenceId) 
+      
+      fetch("http://localhost:4000/services/create", {
+        method: "POST", 
+        headers: {
+          "Content-Type": "application/json", 
+        }, 
+        body: JSON.stringify({
+          referenceId, email, dateCreate, serviceChosen
+        })
+      })
+
+      setReferenceId(null)
+      setEmail("")
+      setDateCreate(null)
+      setServiceChosen("")
+      window.location.reload()
+    }
+
+    return (
+    <div className="servicePage"> 
+        <form id="serviceForm" onSubmit={dbServiceCreate}>
+            <label for="email">Email Address</label>
+            <input type="text" id="email" name="email" 
+              onChange={(e) => setEmail(e.target.value)} />
+        
+          <label for="serviceChosen">Choose a service:</label>
+          <select name="serviceChosen" id="serviceChosen" form="ServiceForm" 
+          onChange={(e) => setServiceChosen(e.target.value)}>
             <option selected hidden>Select Service</option>
             <option value="Boost Bonanza">Boost Bonanza £60</option>
             <option value="Big Boost">Big Boost £40</option>
             <option value="Baby Boost">Baby Boost £20</option>
           </select>
           <h2>*MAKE SURE TO PICK THE SERVICE YOU WANT BEFORE SUBMITTING*</h2>
-        <div className="Refid">
-          <label>Reference ID:</label>
-          <input type="text" id="Refnum" name="Refnum"></input>
-          </div>
+
+          
+          <button className="subButton" type="submit">Submit</button>
+          </form>
     </div>)
     
     }
 
 
-
     export default ServicePage;
+

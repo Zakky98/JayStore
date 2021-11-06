@@ -1,5 +1,5 @@
 function Contact() {
-    return (<div className="ContactInfo"> 
+    return (<div className="contactInfo"> 
         <h2>Here is some contact information for Jays Boosting Service:</h2><br></br>
         <ul>
             <li>

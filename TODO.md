@@ -2,7 +2,6 @@ Jay's EFT Boosting website
 
 Service Model = [
     id: _id
-    username: String,
     email: String,
     dateCreated: Date
 ]
