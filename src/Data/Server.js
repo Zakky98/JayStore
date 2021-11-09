@@ -1,12 +1,14 @@
 const express = require('express')
 const {Service} = require("./ServiceModel")
 const app = express()
+const cors = require("cors")
 const port = 4000
 
 app.get('/', (req, res) => {
   res.send('Hello World!')
 });
 
+app.use(cors())
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 

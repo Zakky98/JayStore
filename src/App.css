@@ -292,10 +292,6 @@ img{
 }
 
 
-/* .Tark1img{
-  padding: 5rem;
-} */
-
 /* Image Spacing/Movement */
 
 .tark1img{
@@ -312,6 +308,13 @@ img{
   height: auto;
   border-radius: 12px;
   padding-bottom: 12rem;
+}
+
+.jayBentimg{
+  justify-content: center;
+  width: auto;
+  height: auto;
+  border-radius: 12px;
 }
 
 /* Image Text Spacing/Movement */
@@ -343,10 +346,19 @@ img{
   transition-duration: 0.4s;
 }
 
-/* .BuyButton:hover{
-  background-color: #4CAF50; 
+/* updateService Buttons */
+.refId button{
+  cursor: pointer;
+  padding: 2rem;
+  margin: 2rem;
+  border-radius: 12rem;
+}
+
+.refId button:hover{
   color: white;
-} */
+  background-color: #4CAF50;
+}
+
 
 /* Services Form */
 
@@ -380,6 +392,11 @@ select {
   box-sizing: border-box;
   padding: 12px 20px;
   margin: 8px 0;
+}
+
+.subButton:hover{
+  color: white;
+  background-color: #4CAF50;
 }
 /* Contact Info Styling */
 
