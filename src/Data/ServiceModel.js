@@ -3,7 +3,8 @@ const { sequelize, Sequelize, DataTypes, Model } = require("./DBcreation");
 class Service extends Model{};
 
 Service.init({
-    reference: DataTypes.INTEGER,
+    reference: {type: DataTypes.INTEGER,
+    primaryKey: true},
     email: DataTypes.STRING,
     date: DataTypes.DATE,
     service: DataTypes.STRING

@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 
 function ServicePage() {
-  const [reference, setReferenceId] = useState(null);
+  const newReferenceId = Math.floor(Math.random() * 1001) + 1;
+  const [reference, setReferenceId] = useState(newReferenceId);
   const [email, setEmail] = useState(null);
-  const [date, setDateCreate] = useState(null);
+  const [date, setDateCreate] = useState(new Date());
   const [service, setServiceChosen] = useState(null);
 
   // TODO Make sure validation check that the servicecreate does not create duplicate reference id's
@@ -38,10 +39,10 @@ function ServicePage() {
     const newService = await handleCreate()
     console.log(newService)
   }
+
   const dbServiceCreate = (event) => {
     event.preventDefault();
     
-    const newReferenceId = Math.floor(Math.random() * 1001) + 1;
     setReferenceId(newReferenceId);
 
     const userDate = new Date();
@@ -60,6 +61,7 @@ function ServicePage() {
           type="text"
           id="email"
           name="email"
+          placeholder="Insert Email Address"
           onChange={(e) => setEmail(e.target.value)}
         />
 
