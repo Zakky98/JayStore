@@ -1,5 +1,5 @@
 *{
-
+  border: 2px solid red;
 }
 
 .App {
@@ -18,7 +18,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #ffffff;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -54,10 +54,10 @@
 
   --first-color: hsl(var(--hue), var(--sat), 40%);
   --first-color-alt: hsl(var(--hue), var(--sat), 36%);
-  --title-color: rgba(255, 255, 255, 0.993);
-  --text-color: rgba(235, 235, 235, 0.993);
+  --title-color: rgba(0, 0, 0, 0.993);
+  --text-color: rgba(0, 0, 0, 0.993);
   --body-color: hsl(var(--hue), 100%, 99%);
-  --container-color: rgb(78, 37, 37);
+  --container-color: rgb(0, 0, 0);
 
   /*========== Font and typography ==========*/
   --body-font: 'Open Sans', sans-serif;
@@ -100,10 +100,11 @@ html{
 }
 
 body{
+  display: block;
   margin: var(--header-height) 0 0 0;
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
-  background-color: #362d53;
+  background-color: #ffffff;
   color: var(--text-color);
 }
 
@@ -134,7 +135,7 @@ img{
 }
 
 .nav__logo{
-  color: var(--title-color);
+  color: #ffffff;
   font-weight: 600;
 }
 
@@ -168,7 +169,7 @@ img{
   flex-direction: column;
   align-items: center;
   row-gap: .25rem;
-  color: var(--title-color);
+  color: #ffffff;
   font-weight: 600;
 }
 
@@ -326,17 +327,18 @@ img{
 /* Page Coloring */
 
 .PageColor{
-  background-color: #362d53;
+  background-color: #ffffff;
   overflow-y: hidden;
 }
 
 /* Button Customisation */
 
 .buyButton{
-  background-color: #e7e7e7; color: black;
+  background-color: #ffffff; color: rgb(0, 0, 0);
   border: none;
   border-radius: 12px;
   color: black;
+  filter: drop-shadow(0 0 0.75rem rgb(0, 0, 0));
   padding: 15px 32px;
   margin-left: 10px;
   text-align: center;

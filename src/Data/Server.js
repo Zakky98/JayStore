@@ -37,13 +37,15 @@ app.post("/services/create", async(req, res) => {
   console.log(newService)
 })
 // --UPDATE SERVICE--
-app.put("/services/:reference/update", async(req, res) => {
+app.post("/services/:reference/update", async(req, res) => {
   const { id, reference, email, date, service} = req.body
-  let currentService = await Service.findByPk(reference)
+  let currentService = Service.findByPk(reference) 
   currentService.email = email
   currentService.date = date
   currentService.service = service
-  currentService.save()
+  currentService.save() 
+  await currentService
+  await res
   console.log(currentService)
   res.json({currentService})
 
