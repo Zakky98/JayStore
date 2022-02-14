@@ -108,10 +108,6 @@ body{
   color: var(--text-color);
 }
 
-ul{
-  list-style: none;
-}
-
 a{
   text-decoration: none;
 }
@@ -220,14 +216,53 @@ img{
   width: auto;
 }
 
-/*=============== MEDIA QUERIES ===============*/
-/* For small devices */
-/* Remove if you choose, the minimalist design */
-/* @media screen and (max-width: 320px){
-  .nav__name{
-    display: none;
-  }
-} */
+.servOne{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.servOne h2 {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.servOne p {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.servTwo{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.servTwo h2 {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.servTwo p {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.servThree{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.servThree h2 {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.servThree p {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
 
 /* For medium devices */
 @media screen and (min-width: 576px){
@@ -267,16 +302,6 @@ img{
     color: #4CAF50;
   }
 
-  /*first design, active link*/
-  /*.active-link:before{
-    content: '';
-    position: absolute;
-    bottom: -.75rem;
-    width: 4px;
-    height: 4px;
-    background-color: var(--first-color);
-    border-radius: 50%;
-  } */
 }
 
 /*Minimalist Design*/
@@ -292,29 +317,28 @@ img{
   }
 }
 
-
 /* Image Spacing/Movement */
 
 .tark1img{
   justify-content: center;
-  width: auto;
-  height: auto;
+  width: 30%;
+  height: 30%;
   border-radius: 12px;
-  padding-bottom: 12rem;
+  /* padding-bottom: 12rem; */
 }
 
 .boostBimg{
   justify-content: center;
-  width: auto;
-  height: auto;
+  width: 30%;
+  height: 30%;
   border-radius: 12px;
-  padding-bottom: 12rem;
+  /* padding-bottom: 12rem; */
 }
 
 .jayBentimg{
   justify-content: center;
-  width: auto;
-  height: auto;
+  width: 30%;
+  height: 30%;
   border-radius: 12px;
 }
 
@@ -361,7 +385,6 @@ img{
   background-color: #4CAF50;
 }
 
-
 /* Services Form */
 
 input[type=text] {
@@ -390,10 +413,11 @@ select {
 .subButton{
   cursor: pointer;
   border-radius: 12px;
-  background-color: white;
+  background-color: black;
   box-sizing: border-box;
   padding: 12px 20px;
   margin: 8px 0;
+  color: white;
 }
 
 .subButton:hover{
@@ -421,10 +445,6 @@ select {
   font-size: 40px;
 }
 
-.homePage li{
-  font-size: 30px;
-}
-
 .homePage p{
   font-size: 25px;
 }
@@ -434,5 +454,7 @@ select {
 .servicePage label{
   font-size: 40px;
 }
+
+/* Add padding to the 3 service components. */
 
 /* REMIND SNAKES, DELETE SERVICE SHOULD BE IN SAME PLACE AS UPDATE SERVICE */

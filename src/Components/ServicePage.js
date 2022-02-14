@@ -79,7 +79,6 @@ function ServicePage() {
           <option value="Big Boost">Big Boost £40</option>
           <option value="Baby Boost">Baby Boost £20</option>
         </select>
-        <h2>*MAKE SURE TO PICK THE SERVICE YOU WANT BEFORE SUBMITTING*</h2>
 
         <button className="subButton" type="submit">
           Submit
