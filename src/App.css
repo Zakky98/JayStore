@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
 *{
   border: 2px solid red;
 }
@@ -60,7 +62,7 @@
   --container-color: rgb(0, 0, 0);
 
   /*========== Font and typography ==========*/
-  --body-font: 'Open Sans', sans-serif;
+  --body-font: 'Poppins', sans-serif;
 
   --h1-font-size: 1.5rem;
   --normal-font-size: .938rem;
@@ -220,6 +222,7 @@ img{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding-bottom: 2rem;
 }
 
 .servOne h2 {
@@ -252,6 +255,7 @@ img{
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding-top: 2rem;
 }
 
 .servThree h2 {
@@ -455,6 +459,48 @@ select {
   font-size: 40px;
 }
 
-/* Add padding to the 3 service components. */
+footer {
+  background-color: #000000;
+}
 
-/* REMIND SNAKES, DELETE SERVICE SHOULD BE IN SAME PLACE AS UPDATE SERVICE */
+.footer_container {
+  row-gap: 3.5rem;
+}
+
+.footer_title {
+  color: #ffffff;
+  margin-bottom: .25rem;
+  padding-left: 5rem;
+  padding-bottom: 1.5rem;
+  padding-top: 1rem;
+}
+
+.footer_subtitle {
+  color: #ffffff;
+  font-size: 18px;
+  padding-left: 5rem;
+}
+
+/* TO DO: Fix footer */
+
+.footer_socials {
+  text-align: right;
+  padding-right: 2rem;
+}
+
+.footer_social {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 50px;
+  font-weight: bold;
+  margin-right: 1.5rem;
+}
+
+.footer_socials a:hover {
+  color: #4CAF50;
+
+}
+
+
+/* REMIND SNAKES, DELETE SERVICE SHOULD BE IN 
+SAME PLACE AS UPDATE SERVICE */

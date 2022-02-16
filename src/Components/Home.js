@@ -9,14 +9,14 @@ function Home() {
       <p>This service will provide you with a boost of 15 million roubles. 
         It will take 1 to 6 days for this service to be fulfilled.
       </p>
-      <img className="jayBentimg" alt="#" src="JayBent.jpg" />
+      <img className="jayBentimg" alt="#" src="BoostBonanza.jpg" />
       </div>
       <div class="servTwo">
       <h2>Big Boost</h2>
       <p>This service will provide you with a boost of 8 million roubles.
         It will take 1 to 4 days for this service to be fulfilled 
       </p>
-      <img className="boostBimg" alt="#" src="BoostB.jpg" />
+      <img className="boostBimg" alt="#" src="BigBoost.jpg" />
         </div>
 
         <div class="servThree">
@@ -24,7 +24,7 @@ function Home() {
       <p>This service will provide you with a boost of 3 million roubles. 
         It will take 1 to 3 days for this service to be fulfilled.
       </p>
-      <img className="tark1img" alt="#" src="Tark1.webp" />
+      <img className="tark1img" alt="#" src="BabyBoost.jpg" />
         </div>
     </div>
   );
@@ -32,4 +32,3 @@ function Home() {
 
 export default Home;
 
-// Add padding to the 3 service components.

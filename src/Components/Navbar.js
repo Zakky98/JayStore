@@ -67,6 +67,25 @@ function Navbar() {
           <h2 class="section__title">Contact Us</h2>
           <Contact />
         </section>
+
+        <footer>
+        <div class="footer_bg">
+            <div class="footer_container grid">
+            <div>
+            <h1 class="footer_title">Jays Boosting Service</h1>
+            <span class="footer_subtitle">Website Created by Zakky98</span>
+            </div>
+        <div class="footer_socials">
+                    <a href="https://www.linkedin.com/in/zak-wilson-a69858197/" target="_blank" class="footer_social" rel="noreferrer">
+                        <i class='bx bxl-linkedin-square'></i>
+                    </a>
+                    <a href="https://github.com/Zakky98" target="_blank" class="footer_social" rel="noreferrer">
+                        <i class='bx bxl-github' ></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        </footer>
       </main>
     </div>
   );

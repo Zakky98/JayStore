@@ -20,6 +20,7 @@ function Contact() {
         </ul>
     </div>)
     
+    
     }
     
     export default Contact;
