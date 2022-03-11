@@ -6,14 +6,14 @@ function Home() {
       </h2>
       <div class="servOne">
       <h2>Boost Bonanza</h2>
-      <p>This service will provide you with a boost of 15 million roubles. 
+      <p>This service will provide you with a boost of <b>15 million</b> roubles. 
         It will take 1 to 6 days for this service to be fulfilled.
       </p>
       <img className="jayBentimg" alt="#" src="BoostBonanza.jpg" />
       </div>
       <div class="servTwo">
       <h2>Big Boost</h2>
-      <p>This service will provide you with a boost of 8 million roubles.
+      <p>This service will provide you with a boost of <b>8 million</b> roubles.
         It will take 1 to 4 days for this service to be fulfilled 
       </p>
       <img className="boostBimg" alt="#" src="BigBoost.jpg" />
@@ -21,7 +21,7 @@ function Home() {
 
         <div class="servThree">
         <h2>Baby Boost</h2>
-      <p>This service will provide you with a boost of 3 million roubles. 
+      <p>This service will provide you with a boost of <b>3 million</b> roubles. 
         It will take 1 to 3 days for this service to be fulfilled.
       </p>
       <img className="tark1img" alt="#" src="BabyBoost.jpg" />

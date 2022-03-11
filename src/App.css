@@ -459,6 +459,13 @@ select {
   font-size: 40px;
 }
 
+/* Update Service Styling */
+
+#UpdateService {
+  overflow: scroll;
+}
+
+/* Footer Styling  */
 footer {
   background-color: #000000;
 }
@@ -481,8 +488,6 @@ footer {
   padding-left: 5rem;
 }
 
-/* TO DO: Fix footer */
-
 .footer_socials {
   text-align: right;
   padding-right: 2rem;
@@ -500,6 +505,8 @@ footer {
   color: #4CAF50;
 
 }
+
+
 
 
 /* REMIND SNAKES, DELETE SERVICE SHOULD BE IN 
