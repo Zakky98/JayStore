@@ -53,6 +53,8 @@ function ServicePage() {
     }, 2000);
   }; 
 
+    // effectively making a new service but it uses the same reference number. 
+
   return (
     <div className="servicePage">
       <form id="serviceForm" onSubmit={dbServiceCreate}>

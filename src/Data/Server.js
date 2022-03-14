@@ -20,13 +20,8 @@ app.get("/services", async (req, res) => {
 
 // --GET SERVICE-- Finds ID of service
 app.get("/services/:reference", async (req, res) => {
+  // FindByPk = find by primary key
   const service = await Service.findByPk(req.params.id);
-  // .then(data => {res.json(data)
-
-  // })
-  // console.log(service)
-  // // FindByPk = find by primary key
-  // res.json(service)
   return service;
 });
 
