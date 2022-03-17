@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
 
-*{
+/* * {
   border: 2px solid red;
-}
+} */
 
 .App {
   text-align: center;
@@ -44,7 +44,7 @@
 }
 
 /*=============== GOOGLE FONTS ===============*/
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
 
 :root {
   --header-height: 3rem;
@@ -52,21 +52,20 @@
   /*========== Colors ==========*/
   --hue: 174;
   --sat: 63%;
-  
 
   --first-color: hsl(var(--hue), var(--sat), 40%);
   --first-color-alt: hsl(var(--hue), var(--sat), 36%);
-  --title-color: rgba(0, 0, 0, 0.993);
-  --text-color: rgba(0, 0, 0, 0.993);
+  --title-color: #fff;
+  --text-color: #fff;
   --body-color: hsl(var(--hue), 100%, 99%);
-  --container-color: rgb(0, 0, 0);
+  --container-color: #2E4057;
 
   /*========== Font and typography ==========*/
-  --body-font: 'Poppins', sans-serif;
+  --body-font: "Poppins", sans-serif;
 
   --h1-font-size: 1.5rem;
-  --normal-font-size: .938rem;
-  --tiny-font-size: .625rem;
+  --normal-font-size: 0.938rem;
+  --tiny-font-size: 0.625rem;
 
   /*========== z index ==========*/
   --z-tooltip: 10;
@@ -74,75 +73,74 @@
 }
 
 /*=============== REUSABLE CSS CLASSES ===============*/
-.section{
+.section {
   padding: 4.5rem 0 2rem;
 }
 
-.section__title{
+.section__title {
   font-size: 72px;
   color: var(--title-color);
   text-align: center;
   margin-bottom: 1.5rem;
-  text-decoration: underline;
 }
 
-.section__height{
+.section__height {
   height: 100vh;
 }
 
 /*=============== BASE ===============*/
-*{
+* {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
 
-html{
+html {
   scroll-behavior: smooth;
 }
 
-body{
+body {
   display: block;
   margin: var(--header-height) 0 0 0;
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
-  background-color: #ffffff;
+  background-color: #2E4057;
   color: var(--text-color);
 }
 
-a{
+a {
   text-decoration: none;
 }
 
-img{
+img {
   max-width: 100%;
   height: auto;
 }
 
 /*=============== NAV ===============*/
-.nav{
+.nav {
   height: var(--header-height);
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.nav__img{
+.nav__img {
   width: 32px;
   border-radius: 50%;
 }
 
-.nav__logo{
+.nav__logo {
   color: #ffffff;
   font-weight: 600;
 }
 
-.nav__logo:hover{
-  color: #4CAF50;
+.nav__logo:hover {
+  color: #EA526F;
 }
 
-@media screen and (max-width: 767px){
-  .nav__menu{
+@media screen and (max-width: 767px) {
+  .nav__menu {
     position: fixed;
     bottom: 0;
     left: 0;
@@ -154,75 +152,74 @@ img{
     display: grid;
     align-content: center;
     border-radius: 1.25rem 1.25rem 0 0;
-    transition: .4s;
+    transition: 0.4s;
   }
 }
 
 .nav__list,
-.nav__link{
+.nav__link {
   display: flex;
 }
 
-.nav__link{
+.nav__link {
   flex-direction: column;
   align-items: center;
-  row-gap: .25rem;
+  row-gap: 0.25rem;
   color: #ffffff;
   font-weight: 600;
 }
 
-.nav__list{
+.nav__list {
   justify-content: space-around;
 }
 
-.nav__name{
+.nav__name {
   font-size: var(--tiny-font-size);
   display: none; /*minimalist design, hidden labels*/
 }
 
-.nav__icon{
+.nav__icon {
   font-size: 1.5rem;
 }
 
-
 /*=============== HEADER ===============*/
-.header{
+.header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  background-color: var(--container-color);
+  background-color: #339989;
   z-index: var(--z-fixed);
-  transition: .4s;
+  transition: 0.4s;
 }
 
 /*=============== LAYOUT ===============*/
-.container{
+.container {
   max-width: 968px;
   margin-left: 1rem;
   margin-right: 1rem;
 }
 
-#home{
+#home {
   height: auto;
   width: auto;
 }
 
-#Services{
+#Services {
   height: auto;
   width: auto;
 }
 
-#ContactUs{
+#ContactUs {
   height: auto;
   width: auto;
 }
 
-.servOne{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-bottom: 2rem;
+.servOne {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 2rem;
 }
 
 .servOne h2 {
@@ -235,7 +232,7 @@ img{
   padding-right: 2rem;
 }
 
-.servTwo{
+.servTwo {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -251,7 +248,7 @@ img{
   padding-right: 2rem;
 }
 
-.servThree{
+.servThree {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -269,53 +266,52 @@ img{
 }
 
 /* For medium devices */
-@media screen and (min-width: 576px){
-  .nav__list{
+@media screen and (min-width: 576px) {
+  .nav__list {
     justify-content: center;
     column-gap: 3rem;
   }
 }
 
-@media screen and (min-width: 767px){
-  body{
+@media screen and (min-width: 767px) {
+  body {
     margin: 0;
   }
 
-  .section{
+  .section {
     padding: 7rem 0 2rem;
   }
 
-  .nav{
+  .nav {
     height: calc(var(--header-height) + 1.5rem); /*4.5rem*/
   }
 
-  .nav__img{
+  .nav__img {
     display: none;
   }
 
-  .nav__icon{
+  .nav__icon {
     display: none;
   }
 
-  .nav__name{
+  .nav__name {
     font-size: var(--normal-font-size);
     display: block; /*Minimalist Design, visible labels*/
   }
 
-  .nav__link:hover{
-    color: #4CAF50;
+  .nav__link:hover {
+    color: #EA526F;
   }
-
 }
 
 /*Minimalist Design*/
-.active-link::before{
-  bottom: -.75rem;
+.active-link::before {
+  bottom: -0.75rem;
 }
 
 /* For large devices */
-@media screen and (min-width: 1024px){
-  .container{
+@media screen and (min-width: 1024px) {
+  .container {
     margin-left: auto;
     margin-right: auto;
   }
@@ -323,7 +319,7 @@ img{
 
 /* Image Spacing/Movement */
 
-.tark1img{
+.tark1img {
   justify-content: center;
   width: 30%;
   height: 30%;
@@ -331,7 +327,7 @@ img{
   /* padding-bottom: 12rem; */
 }
 
-.boostBimg{
+.boostBimg {
   justify-content: center;
   width: 30%;
   height: 30%;
@@ -339,7 +335,7 @@ img{
   /* padding-bottom: 12rem; */
 }
 
-.jayBentimg{
+.jayBentimg {
   justify-content: center;
   width: 30%;
   height: 30%;
@@ -347,22 +343,23 @@ img{
 }
 
 /* Image Text Spacing/Movement */
-.tark1Text{
+.tark1Text {
   text-align: left;
   justify-content: space-around;
 }
 
 /* Page Coloring */
 
-.PageColor{
-  background-color: #ffffff;
+.PageColor {
+  background-color: #2E4057 ;
   overflow-y: hidden;
 }
 
 /* Button Customisation */
 
-.buyButton{
-  background-color: #ffffff; color: rgb(0, 0, 0);
+.buyButton {
+  background-color: #006E90;
+  color: rgb(0, 0, 0);
   border: none;
   border-radius: 12px;
   color: black;
@@ -377,21 +374,21 @@ img{
 }
 
 /* updateService Buttons */
-.refId button{
+.refId button {
   cursor: pointer;
   padding: 2rem;
   margin: 2rem;
   border-radius: 12rem;
 }
 
-.refId button:hover{
+.refId button:hover {
   color: white;
-  background-color: #4CAF50;
+  background-color: #EA526F;
 }
 
 /* Services Form */
 
-input[type=text] {
+input[type="text"] {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -399,7 +396,6 @@ input[type=text] {
   border-radius: 12px;
   font-size: var(--normal-font-size);
 }
-
 
 select {
   cursor: pointer;
@@ -410,23 +406,16 @@ select {
   background-color: white;
 }
 
-.refId{
-  padding-top: 12rem;
-}
-
-.subButton{
+.subButton {
   cursor: pointer;
-  border-radius: 12px;
-  background-color: black;
-  box-sizing: border-box;
-  padding: 12px 20px;
-  margin: 8px 0;
-  color: white;
+  padding: 2rem;
+  margin: 2rem;
+  border-radius: 12rem;
 }
 
-.subButton:hover{
+.subButton:hover {
   color: white;
-  background-color: #4CAF50;
+  background-color: #EA526F;
 }
 /* Contact Info Styling */
 
@@ -434,9 +423,8 @@ select {
   font-size: 30px;
 }
 
-
 .contactInfo li {
-
+  padding-top: 2rem;
 }
 
 .contactInfo p {
@@ -445,29 +433,25 @@ select {
 
 /* Home Section Styling */
 
-.homePage h2{
+.homePage h2 {
   font-size: 40px;
 }
 
-.homePage p{
+.homePage p {
   font-size: 25px;
 }
 
 /* Service Section Styling */
 
-.servicePage label{
+.servicePage label {
   font-size: 40px;
 }
 
 /* Update Service Styling */
 
-#UpdateService {
-  overflow: scroll;
-}
-
 /* Footer Styling  */
 footer {
-  background-color: #000000;
+  background-color: #339989;
 }
 
 .footer_container {
@@ -476,16 +460,12 @@ footer {
 
 .footer_title {
   color: #ffffff;
-  margin-bottom: .25rem;
-  padding-left: 5rem;
-  padding-bottom: 1.5rem;
   padding-top: 1rem;
 }
 
 .footer_subtitle {
   color: #ffffff;
   font-size: 18px;
-  padding-left: 5rem;
 }
 
 .footer_socials {
@@ -502,12 +482,6 @@ footer {
 }
 
 .footer_socials a:hover {
-  color: #4CAF50;
-
+  color: #EA526F;
 }
 
-
-
-
-/* REMIND SNAKES, DELETE SERVICE SHOULD BE IN 
-SAME PLACE AS UPDATE SERVICE */
