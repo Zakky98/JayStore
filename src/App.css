@@ -83,10 +83,8 @@
   text-align: center;
   margin-bottom: 1.5rem;
 }
+/* 
 
-.section__height {
-  height: 100vh;
-}
 
 /*=============== BASE ===============*/
 * {
@@ -215,55 +213,28 @@ img {
   width: auto;
 }
 
-.servOne {
+.servContainer {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding-bottom: 2rem;
+  flex-direction: column;
 }
 
-.servOne h2 {
+.servContainer h2 {
   padding-left: 2rem;
   padding-right: 2rem;
+  padding-bottom: 2rem;
+  font-size: 40px;
 }
 
-.servOne p {
+.servContainer p {
   padding-left: 2rem;
   padding-right: 2rem;
+  padding-bottom: 2rem;
+  font-size: 25px;
 }
 
-.servTwo {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.servTwo h2 {
-  padding-left: 2rem;
-  padding-right: 2rem;
-}
-
-.servTwo p {
-  padding-left: 2rem;
-  padding-right: 2rem;
-}
-
-.servThree {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding-top: 2rem;
-}
-
-.servThree h2 {
-  padding-left: 2rem;
-  padding-right: 2rem;
-}
-
-.servThree p {
-  padding-left: 2rem;
-  padding-right: 2rem;
-}
 
 /* For medium devices */
 @media screen and (min-width: 576px) {
@@ -319,28 +290,15 @@ img {
 
 /* Image Spacing/Movement */
 
-.tark1img {
+.stockImgs {
   justify-content: center;
   width: 30%;
   height: 30%;
   border-radius: 12px;
-  /* padding-bottom: 12rem; */
+  padding-bottom: 5rem;
 }
 
-.boostBimg {
-  justify-content: center;
-  width: 30%;
-  height: 30%;
-  border-radius: 12px;
-  /* padding-bottom: 12rem; */
-}
 
-.jayBentimg {
-  justify-content: center;
-  width: 30%;
-  height: 30%;
-  border-radius: 12px;
-}
 
 /* Image Text Spacing/Movement */
 .tark1Text {
@@ -435,11 +393,9 @@ select {
 
 .homePage h2 {
   font-size: 40px;
+  padding-bottom: 8rem;
 }
-
-.homePage p {
-  font-size: 25px;
-}
+ 
 
 /* Service Section Styling */
 

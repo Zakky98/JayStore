@@ -9,35 +9,41 @@ function UpdateService() {
 
   // Check Service
 
-  const checkService = async () => {  
-  
-    const requestService = await fetch(
-    `http://localhost:4000/services/${reference}`,
-    {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({
-        reference
-      })
-    }
-  )
-    .then((data) => {
-      console.log("data" + data);
-      const getService = data.json()
-      console.log("getService" + getService)
-      getService.then((res ) => {
-      console.log("res" + res)
-      })
-    })
-    .catch((e) => {
-      console.log(e)
-    }) 
-
+  const checkService = async () => {
+    const currentService = await fetch(
+      `http://localhost:4000/services/${reference}`,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          reference,
+        }),
+      }
+    ).then(async (res) => {
+      setReferenceId(res.body.reference);
+      setEmail(res.body.email);
+      setServiceChosen(res.body.service);
+    });
   };
-  
-// fix check service
+
+  // fix check service
+
+  //   .then(res => {res.json()
+  //   console.log(res.json())})
+  //   .then(data => {
+  //       console.log("json Response" + data)
+  //       for (const field of data.fields) {
+  //         setReferenceId(field.reference)
+  //         setEmail(field.email)
+  //         setServiceChosen(field.service)
+  //       }
+  //     })
+  //   .catch((e) => {
+  //     console.log(e)
+  //   })
+  // console.log(currentService)
 
   // Update Service
 
@@ -51,7 +57,7 @@ function UpdateService() {
       {
         method: "POST",
         headers: {
-          "Content-Type": "application/json"
+          "Content-Type": "application/json",
         },
         body: JSON.stringify({
           reference,
@@ -81,7 +87,7 @@ function UpdateService() {
       {
         method: "POST",
         headers: {
-          "Content-Type": "application/json"
+          "Content-Type": "application/json",
         },
         body: JSON.stringify({
           reference,

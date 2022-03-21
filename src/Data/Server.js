@@ -19,10 +19,23 @@ app.get("/services", async (req, res) => {
 });
 
 // --GET SERVICE-- Finds ID of service
-app.get("/services/:reference", async (req, res) => {
+app.post("/services/:reference", async (req, res) => {
   // FindByPk = find by primary key
-  const service = await Service.findByPk(req.params.id);
-  return service;
+  const { reference } = req.body;
+  const service = await Service.findOne({
+    where: { reference: reference },
+  });
+  await res;
+  // const resReference = service.reference
+  // const resEmail = service.email
+  // const resService = service.service
+  res.json({
+    reference: res.reference,
+    email: res.email,
+    service: res.service
+  })
+  console.log("res" + res.json) 
+  console.log(service)
 });
 
 // --ADD SERVICE--
