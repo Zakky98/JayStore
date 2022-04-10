@@ -59,6 +59,8 @@
   --text-color: #fff;
   --body-color: hsl(var(--hue), 100%, 99%);
   --container-color: #2E4057;
+  --hover-color: #EA526F;
+  --secondary-color: #339989;
 
   /*========== Font and typography ==========*/
   --body-font: "Poppins", sans-serif;
@@ -102,7 +104,7 @@ body {
   margin: var(--header-height) 0 0 0;
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
-  background-color: #2E4057;
+  background-color: var(--container-color);
   color: var(--text-color);
 }
 
@@ -134,7 +136,7 @@ img {
 }
 
 .nav__logo:hover {
-  color: #EA526F;
+  color: var(--hover-color);
 }
 
 @media screen and (max-width: 767px) {
@@ -186,7 +188,7 @@ img {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #339989;
+  background-color: var(--secondary-color);
   z-index: var(--z-fixed);
   transition: 0.4s;
 }
@@ -271,7 +273,7 @@ img {
   }
 
   .nav__link:hover {
-    color: #EA526F;
+    color: var(--hover-color);
   }
 }
 
@@ -309,7 +311,7 @@ img {
 /* Page Coloring */
 
 .PageColor {
-  background-color: #2E4057 ;
+  background-color: var(--container-color);
   overflow-y: hidden;
 }
 
@@ -341,7 +343,7 @@ img {
 
 .refId button:hover {
   color: white;
-  background-color: #EA526F;
+  background-color: var(--hover-color);
 }
 
 /* Services Form */
@@ -373,7 +375,7 @@ select {
 
 .subButton:hover {
   color: white;
-  background-color: #EA526F;
+  background-color: var(--hover-color);
 }
 /* Contact Info Styling */
 
@@ -407,7 +409,7 @@ select {
 
 /* Footer Styling  */
 footer {
-  background-color: #339989;
+  background-color: var(--secondary-color);
 }
 
 .footer_container {
@@ -438,6 +440,6 @@ footer {
 }
 
 .footer_socials a:hover {
-  color: #EA526F;
+  color: var(--hover-color);
 }
 

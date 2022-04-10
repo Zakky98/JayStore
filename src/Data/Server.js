@@ -14,30 +14,20 @@ app.use(express.json());
 
 // --GET SERVICES--
 app.get("/services", async (req, res) => {
-  const services = await Service.findAll();
-  console.log(services);
+  await Service.findAll();
 });
 
 // --GET SERVICE-- Finds ID of service
-app.post("/services/:reference", async (req, res) => {
+app.get("/services/:reference", async (req, res) => {
   // FindByPk = find by primary key
-  const { reference } = req.body;
-  const service = await Service.findOne({
-    where: { reference: reference },
+  const currentService = await Service.findOne({
+    where: { reference: req.params.id },
   });
-  await res;
-  // const resReference = service.reference
-  // const resEmail = service.email
-  // const resService = service.service
-  res.json({
-    reference: res.reference,
-    email: res.email,
-    service: res.service
-  })
-  console.log("res" + res.json) 
-  console.log(service)
+  res.json({ currentService });
+  // console.log(service)
+  // res.json(service)
 });
-
+// THIS IS WHERE WE WERE.
 // --ADD SERVICE--
 app.post("/services/create", async (req, res) => {
   const newService = Service.create(req.body);

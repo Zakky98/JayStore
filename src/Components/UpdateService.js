@@ -2,48 +2,50 @@
 import React, { useState, useEffect } from "react";
 
 function UpdateService() {
-  const [reference, setReferenceId] = useState();
+  const [reference, setReferenceId] = useState("");
   const [email, setEmail] = useState();
   const [date, setDate] = useState();
   const [service, setServiceChosen] = useState();
 
   // Check Service
 
-  const checkService = async () => {
-    const currentService = await fetch(
-      `http://localhost:4000/services/${reference}`,
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          reference,
-        }),
-      }
-    ).then(async (res) => {
-      setReferenceId(res.body.reference);
-      setEmail(res.body.email);
-      setServiceChosen(res.body.service);
-    });
-  };
-
-  // fix check service
-
-  //   .then(res => {res.json()
-  //   console.log(res.json())})
-  //   .then(data => {
-  //       console.log("json Response" + data)
-  //       for (const field of data.fields) {
-  //         setReferenceId(field.reference)
-  //         setEmail(field.email)
-  //         setServiceChosen(field.service)
-  //       }
-  //     })
-  //   .catch((e) => {
-  //     console.log(e)
+  // const checkService = async () => {
+  //   const service = await fetch(`http://localhost:4000/services/${reference}`, {
+  //     method: "GET",
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //     }
   //   })
-  // console.log(currentService)
+  //   .then(data => {
+  //     if (!data.ok) {
+  //       throw Error(data.status)
+  //     }
+  //     console.log(data)
+  //     return data.json()
+      
+  //   })
+  //   .then(res => {
+  //     console.log(res)
+  //   })
+
+  //   console.log(service)
+  // };
+
+  // const CheckService2 = async () => {
+  //   const allServices = await fetch(`http://localhost:4000/services`, {
+  //     method: "GET",
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //     }
+  //   })
+  //   .then(data => {
+  //     if (!data.ok) {
+  //       throw Error(data.status)
+  //     }
+  //     console.log(data)
+  //     return data.json()
+  //   })
+  // }
 
   // Update Service
 
@@ -150,7 +152,7 @@ function UpdateService() {
       </form>
       {/* Does service need to be changed to an option. see if it works. */}
       <div className="refId">
-        <button onClick={checkService}>Check Service</button>
+        {/* <button onClick={CheckService2}>Check Service</button> */}
         <button onClick={UpdateService}>Update Service</button>
         <button onClick={DeleteService}>Delete Service</button>
       </div>
